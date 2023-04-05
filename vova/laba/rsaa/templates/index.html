@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="{% url 'rsa' %}">
+        {% csrf_token %}
+        <div>
+            <label for="messange">Введите сообщение:</label>
+            <input type="text" id="messange" name="messange" required><br><br>
+        </div>
+            <button name="crypto">Сгенерировать</button>
+        </div>
+    </form>
+    <h1>Зашифровоное слов<br> {{mes}}</h1>
+    <h1>Расшифровоное слово<br> {{res}}</h1>
+</body>
+</html>
